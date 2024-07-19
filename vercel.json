@@ -9,14 +9,14 @@
             }
         }
     ],
-    "rewrites": [
-        {
-            "source": "/static/(.*)",
-            "destination": "/staticfiles/$1"
-        },
+    "routes": [
         {
             "source": "/(.*)",
             "destination": "core/wsgi.py"
+        },
+        {
+            "source": "/static/(.*)",
+            "destination": "/staticfiles/$1"
         }
     ]
 }
